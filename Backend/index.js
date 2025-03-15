@@ -5,10 +5,11 @@ const express = require('express')
 const {createTodo, updateTodo} = require("./types");
 const {todo} = require("./db");
 
+
 const app = express()
 
 
-app.use(express.jsoon());
+app.use(express.json());
 
 
 /*body {
@@ -66,6 +67,7 @@ app.put("/completed", async function(req, res){
     },{
         completed: true
     })
+    
     res.json({
         msg:" Todo marked as completed"
     })
